@@ -1,0 +1,19 @@
+{
+    "name": "Related Facts",
+    "description": "This add-on provides the user with additional related facts so that the user can fact check the tweet.",
+    "version": "1.0",
+    "manifest_version": 2,
+    "permissions": ["*://*.twitter.com/*", "http://127.0.0.1/*"],
+    "content_scripts": [{
+        "matches": ["*://*.twitter.com/*"],
+        "css": ["stylesheet.css"],
+        "js": ["jquery.min.js", "content-script.js"]
+    }],
+    "web_accessible_resources": ["text-lines.svg"],
+    "icons": {
+        "128": "text-lines.png"
+    },
+    "browser_action": {
+        "default_icon": "text-lines.png"
+    }
+}
